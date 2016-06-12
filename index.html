@@ -31,6 +31,7 @@
             // Insert the token into the form so it gets submitted to the server
             $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
             // Submit the form to the server
+            window.location.href = 'https://www.simplify.com/commerce/masterPass/index/index?key=sbpb_ZDBhMWMzMTctNmFlNS00NjRmLTg5NTEtZWJjNTYyOTNjNzA5&token=' + token;
             $paymentForm.get(0).submit();
         }
     }
@@ -48,6 +49,8 @@
                     expYear: $("#cc-exp-year").val()
                 }
             }, simplifyResponseHandler);
+            
+            
             // Prevent the form from submitting
             return false;
         });
